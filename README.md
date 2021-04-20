@@ -1,2 +1,2 @@
 # cypress-practice
-Cypress practice
+Testing Cypress Automation Framework

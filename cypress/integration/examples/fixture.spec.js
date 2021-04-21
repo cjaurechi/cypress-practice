@@ -1,0 +1,14 @@
+/// <reference types="Cypress" />
+
+describe('Login with Fixtures Data', () => {
+    it('User login', () => {
+        cy.visit('http://zero.webappsecurity.com/login.html');
+        cy.fixture('user').then((user) => {
+            const username = user.username;
+            const password = user.password;
+            cy.get('#user_login').clear().type(username);
+            cy.get('#user_password').clear().type(password);
+            cy.contains('Sign in').click();
+        });
+    });
+});

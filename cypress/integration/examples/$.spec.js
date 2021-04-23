@@ -7,7 +7,6 @@ describe('Using Cypress.$ function', () => {
 
     it('Expose jQuery element in the current window', () => {
         const signInButton = Cypress.$('#signin_button'); // Don't do this, it's a really bad practice
-        // signInButton.click();
         signInButton.trigger('click');
     })
 })
